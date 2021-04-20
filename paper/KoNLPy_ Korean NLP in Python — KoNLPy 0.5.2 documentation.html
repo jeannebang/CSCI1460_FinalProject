@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0029)https://konlpy.org/en/latest/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/analytics.js.다운로드"></script><script type="text/javascript" async="" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/js"></script><script type="text/javascript" async="" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/analytics.js.다운로드"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <title>KoNLPy: Korean NLP in Python — KoNLPy 0.5.2 documentation</title>
+    <link rel="stylesheet" href="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/konlpy.css" type="text/css">
+    <link rel="stylesheet" href="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/pygments.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/badge_only.css">
+    <script type="text/javascript" id="documentation_options" data-url_root="#" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/documentation_options.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/jquery-1.11.2.min.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/underscore.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/doctools.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/language_data.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/readthedocs-doc-embed.js.다운로드"></script>
+    <script async="async" type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/latest.js.다운로드"></script>
+    <script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/bootstrap-affix.min.js.다운로드"></script>
+    <link rel="index" title="Index" href="https://konlpy.org/en/latest/genindex/">
+    <link rel="search" title="Search" href="https://konlpy.org/en/latest/search/">
+    <link rel="next" title="What is NLP?" href="https://konlpy.org/en/latest/start/">
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/small_flask.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://konlpy.org/en/latest/">
+
+<link rel="stylesheet" href="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/readthedocs-data.js.다운로드"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = "index"
+READTHEDOCS_DATA['source_suffix'] = ".rst"
+</script>
+
+<script type="text/javascript" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/readthedocs-analytics.js.다운로드"></script><script src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/js(1)" type="text/javascript" async=""></script>
+
+<!-- end RTD <extrahead> -->
+<script src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/ethicalads.min.js.다운로드" type="text/javascript" async="" id="ethicaladsjs"></script><style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-weight:normal;font-style:normal;leter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em 0.5em 1em;padding:1em;background:rgba(0,0,0,0.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:0.8em}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,0.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,0.07)}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,0.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type="image"].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type="image"].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type="image"].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type="image"].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type="image"].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type="image"].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type="image"].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type="image"].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type="image"].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type="text"].loaded,.ea-type-text{font-size:14px}[data-ea-type="text"].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type="text"].loaded .ea-callout,.ea-type-text .ea-callout{margin:0.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}
+</style><script type="text/javascript" async="" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/MathJax.js.다운로드"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body data-new-gr-c-s-check-loaded="14.1005.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://konlpy.org/en/latest/genindex/" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://konlpy.org/en/latest/py-modindex/" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://konlpy.org/en/latest/start/" title="What is NLP?" accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="https://konlpy.org/en/latest/#">KoNLPy 0.5.2 documentation</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+    
+  <div class="section" id="konlpy-korean-nlp-in-python">
+<h1>KoNLPy: Korean NLP in Python<a class="headerlink" href="https://konlpy.org/en/latest/#konlpy-korean-nlp-in-python" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://travis-ci.org/konlpy/konlpy"><img alt="Build status" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/passing.svg" style="height: 18px;"></a>
+<a class="reference external image-reference" href="https://readthedocs.org/projects/konlpy/?badge=latest"><img alt="Documentation Status" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/saved_resource" style="height: 18px;"></a>
+<p>KoNLPy (pronounced <em>“ko en el PIE”</em>) is a Python package for natural language processing (NLP) of the Korean language.
+For installation directions, see <a class="reference internal" href="https://konlpy.org/en/latest/install/"><span class="doc">here</span></a>.</p>
+<p>For users new to NLP, go to <a class="reference internal" href="https://konlpy.org/en/latest/#start"><span class="std std-ref">Getting started</span></a>.
+For step-by-step instructions, follow the <a class="reference internal" href="https://konlpy.org/en/latest/#guide"><span class="std std-ref">User guide</span></a>.
+For specific descriptions of each module, go see the <a class="reference internal" href="https://konlpy.org/en/latest/#api"><span class="std std-ref">API</span></a> documents.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">konlpy.tag</span> <span class="kn">import</span> <span class="n">Kkma</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">konlpy.utils</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kkma</span> <span class="o">=</span> <span class="n">Kkma</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">kkma</span><span class="o">.</span><span class="n">sentences</span><span class="p">(</span><span class="sa">u</span><span class="s1">'네, 안녕하세요. 반갑습니다.'</span><span class="p">))</span>
+<span class="go">[네, 안녕하세요..,</span>
+<span class="go"> 반갑습니다.]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">kkma</span><span class="o">.</span><span class="n">nouns</span><span class="p">(</span><span class="sa">u</span><span class="s1">'질문이나 건의사항은 깃헙 이슈 트래커에 남겨주세요.'</span><span class="p">))</span>
+<span class="go">[질문,</span>
+<span class="go"> 건의,</span>
+<span class="go"> 건의사항,</span>
+<span class="go"> 사항,</span>
+<span class="go"> 깃헙,</span>
+<span class="go"> 이슈,</span>
+<span class="go"> 트래커]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">kkma</span><span class="o">.</span><span class="n">pos</span><span class="p">(</span><span class="sa">u</span><span class="s1">'오류보고는 실행환경, 에러메세지와함께 설명을 최대한상세히!^^'</span><span class="p">))</span>
+<span class="go">[(오류, NNG),</span>
+<span class="go"> (보고, NNG),</span>
+<span class="go"> (는, JX),</span>
+<span class="go"> (실행, NNG),</span>
+<span class="go"> (환경, NNG),</span>
+<span class="go"> (,, SP),</span>
+<span class="go"> (에러, NNG),</span>
+<span class="go"> (메세지, NNG),</span>
+<span class="go"> (와, JKM),</span>
+<span class="go"> (함께, MAG),</span>
+<span class="go"> (설명, NNG),</span>
+<span class="go"> (을, JKO),</span>
+<span class="go"> (최대한, NNG),</span>
+<span class="go"> (상세히, MAG),</span>
+<span class="go"> (!, SF),</span>
+<span class="go"> (^^, EMO)]</span>
+</pre></div>
+</div>
+<div class="section" id="standing-on-the-shoulders-of-giants">
+<h2>Standing on the shoulders of giants<a class="headerlink" href="https://konlpy.org/en/latest/#standing-on-the-shoulders-of-giants" title="Permalink to this headline">¶</a></h2>
+<p>Korean, the <a class="reference external" href="http://www.koreatimes.co.kr/www/news/nation/2014/05/116_157214.html">13th most widely spoken language in the world</a>, is a beautiful, yet complex language.
+Myriad <a class="reference internal" href="https://konlpy.org/en/latest/references/#engines"><span class="std std-ref">Korean morpheme analyzer tools</span></a> were built by numerous researchers, to computationally extract meaningful features from the labyrinthine text.</p>
+<p>KoNLPy is not just to create another, but to unify and build upon their shoulders, and see one step further.
+It is built particularly in the <a class="reference external" href="http://python.org/">Python (programming) language</a>, not only because of the language’s simplicity and elegance, but also the powerful string processing modules and applicability to various tasks - including crawling, Web programming, and data analysis.</p>
+<p>The three main philosophies of this project are:</p>
+<ul class="simple">
+<li>Keep it simple.</li>
+<li>Make it easy. For humans.</li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#contribute"><span class="std std-ref">“Democracy on the web works.”</span></a></li>
+</ul>
+<p>Please <a class="reference external" href="https://github.com/konlpy/konlpy/issues">report</a> when you think any have gone stale.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="https://konlpy.org/en/latest/#license" title="Permalink to this headline">¶</a></h2>
+<p>KoNLPy is Open Source Software, and is released under the license below:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://gnu.org/licenses/gpl.html">GPL v3 or above</a></li>
+</ul>
+<p>You are welcome to use the code under the terms of the license, however please acknowledge its use with a citation.</p>
+<ul class="simple">
+<li>Eunjeong L. Park, Sungzoon Cho. “<a class="reference external" href="http://dmlab.snu.ac.kr/~lucypark/docs/2014-10-10-hclt.pdf">KoNLPy: Korean natural language processing in Python</a>”, Proceedings of the 26th Annual Conference on Human &amp; Cognitive Language Technology, Chuncheon, Korea, Oct 2014.</li>
+</ul>
+<p>Here is a BibTeX entry.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inproceedings</span><span class="p">{</span><span class="n">park2014konlpy</span><span class="p">,</span>
+  <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">KoNLPy</span><span class="p">:</span> <span class="n">Korean</span> <span class="n">natural</span> <span class="n">language</span> <span class="n">processing</span> <span class="ow">in</span> <span class="n">Python</span><span class="p">},</span>
+  <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Park</span><span class="p">,</span> <span class="n">Eunjeong</span> <span class="n">L</span><span class="o">.</span> <span class="ow">and</span> <span class="n">Cho</span><span class="p">,</span> <span class="n">Sungzoon</span><span class="p">},</span>
+  <span class="n">booktitle</span><span class="o">=</span><span class="p">{</span><span class="n">Proceedings</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">26</span><span class="n">th</span> <span class="n">Annual</span> <span class="n">Conference</span> <span class="n">on</span> <span class="n">Human</span> <span class="o">&amp;</span> <span class="n">Cognitive</span> <span class="n">Language</span> <span class="n">Technology</span><span class="p">},</span>
+  <span class="n">address</span><span class="o">=</span><span class="p">{</span><span class="n">Chuncheon</span><span class="p">,</span> <span class="n">Korea</span><span class="p">},</span>
+  <span class="n">month</span><span class="o">=</span><span class="p">{</span><span class="n">October</span><span class="p">},</span>
+  <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2014</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contribute">
+<span id="id1"></span><h2>Contribute<a class="headerlink" href="https://konlpy.org/en/latest/#contribute" title="Permalink to this headline">¶</a></h2>
+<p>KoNLPy isn’t perfect,
+but it will continuously evolve and you are invited to participate!</p>
+<p>Found a bug?
+Have a good idea for improving KoNLPy?
+Visit the <a class="reference external" href="https://github.com/konlpy/konlpy">KoNLPy GitHub page</a>
+and <a class="reference external" href="https://github.com/konlpy/konlpy/issues">suggest an idea</a>
+or <a class="reference external" href="https://github.com/konlpy/konlpy/pulls">make a pull request</a>.</p>
+<p>You are also welcome to join
+our <a class="reference external" href="https://gitter.im/konlpy/konlpy">gitter</a>
+and the <a class="reference external" href="https://groups.google.com/forum/#!forum/konlpy">mailing list</a>.
+Gitter is more focused on development discussions
+while the mailing list is a better place to ask questions,
+but nobody stops you from going the other way around.</p>
+<p>Please note that
+<em>asking questions through these channels is also a great contribution</em>,
+because it gives the community feedback as well as ideas.
+Don’t hesitate to ask.</p>
+</div>
+<div class="section" id="getting-started">
+<span id="start"></span><h2>Getting started<a class="headerlink" href="https://konlpy.org/en/latest/#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/start/">What is NLP?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/start/#what-do-i-need-to-get-started">What do I need to get started?</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="user-guide">
+<span id="guide"></span><h2>User guide<a class="headerlink" href="https://konlpy.org/en/latest/#user-guide" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/install/">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/install/#ubuntu">Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/install/#centos">CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/install/#id1">Mac OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/install/#id2">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/install/#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/morph/">Morphological analysis and POS tagging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/morph/#pos-tagging-with-konlpy">POS tagging with KoNLPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/morph/#comparison-between-pos-tagging-classes">Comparison between POS tagging classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/data/">Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/data/#corpora">Corpora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/data/#dictionaries">Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/examples/">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/examples/#contents">Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/test/">Running tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/references/">References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/references/#korean-morpheme-analyzer-tools">Korean morpheme analyzer tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/references/#corpora">Corpora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/references/#other-nlp-tools">Other NLP tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api">
+<span id="id2"></span><h2>API<a class="headerlink" href="https://konlpy.org/en/latest/#api" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/">konlpy Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/">tag Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/#module-konlpy.tag._hannanum"><code class="docutils literal notranslate"><span class="pre">Hannanum</span></code> Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/#module-konlpy.tag._kkma"><code class="docutils literal notranslate"><span class="pre">Kkma</span></code> Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/#module-konlpy.tag._komoran"><code class="docutils literal notranslate"><span class="pre">Komoran</span></code> Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/#mecab-class"><code class="docutils literal notranslate"><span class="pre">Mecab</span></code> Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.tag/#okt-class"><code class="docutils literal notranslate"><span class="pre">Okt</span></code> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy.corpus/">corpus Package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/#module-konlpy.data"><code class="docutils literal notranslate"><span class="pre">data</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/#module-konlpy.downloader"><code class="docutils literal notranslate"><span class="pre">downloader</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/#module-konlpy.jvm"><code class="docutils literal notranslate"><span class="pre">jvm</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://konlpy.org/en/latest/api/konlpy/#module-konlpy.utils"><code class="docutils literal notranslate"><span class="pre">utils</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="https://konlpy.org/en/latest/#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="https://konlpy.org/en/latest/genindex/"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/py-modindex/"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/search/"><span class="std std-ref">Search Page</span></a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/changelog/"><span class="doc">Change logs</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="https://konlpy.org/en/latest/#">
+              <img class="logo" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/konlpy.png" alt="Logo">
+            </a></p><a href="https://github.com/konlpy/konlpy" class="github">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" class="github">
+</a><p><iframe src="./KoNLPy_ Korean NLP in Python — KoNLPy 0.5.2 documentation_files/github-btn.html" allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe></p>
+
+<p>
+KoNLPy is a Python package for Korean natural language processing.
+</p>
+  <h3><a href="https://konlpy.org/en/latest/#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#">KoNLPy: Korean NLP in Python</a><ul>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#standing-on-the-shoulders-of-giants">Standing on the shoulders of giants</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#license">License</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#contribute">Contribute</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#user-guide">User guide</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#api">API</a></li>
+<li><a class="reference internal" href="https://konlpy.org/en/latest/#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+<h3>Translations</h3>
+<ul>
+  
+  <li><a href="http://konlpy.org/en">English</a></li>
+  <li><a href="http://konlpy.org/ko">한국어</a></li>
+  
+</ul>
+<div id="searchbox" style="" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="https://konlpy.org/en/latest/search/" method="get">
+      <input type="text" name="q">
+      <input type="submit" value="Go">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      © Copyright 2014-2019, KoNLPy (GPL license).
+    </div>
+  
+<div class="crt-wrapper"></div><div class="delta-wrapper"></div><!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      <dl>
+        <dt>Languages</dt>
+
+        
+         <strong> 
+        <dd><a href="https://konlpy.org/en/latest/">en</a></dd>
+         </strong> 
+
+        
+        
+        
+        
+        
+        
+        <dd><a href="https://konlpy.org/ko/latest/">ko</a></dd>
+        
+        
+        
+        
+
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+         <strong> 
+        <dd><a href="https://konlpy.org/en/latest/">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="https://konlpy.org/en/stable/">stable</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.5.2/">v0.5.2</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.5.1/">v0.5.1</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.5.0/">v0.5.0</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.4.4/">v0.4.4</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.4.3/">v0.4.3</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.4.2/">v0.4.2</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.4.0/">v0.4.0</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.3.3/">v0.3.3</a></dd>
+        
+        
+        
+        <dd><a href="https://konlpy.org/en/v0.3.0/">v0.3.0</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="https://konlpy.org/_/downloads/en/latest/pdf/">PDF</a></dd>
+        
+        <dd><a href="https://konlpy.org/_/downloads/en/latest/htmlzip/">HTML</a></dd>
+        
+        <dd><a href="https://konlpy.org/_/downloads/en/latest/epub/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/konlpy/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/konlpy/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/konlpy/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/konlpy/konlpy/blob/master/docs/index.rst">보기</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/konlpy/konlpy/edit/master/docs/index.rst">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>검색</dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/konlpy/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      
+      
+
+      <hr>
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div>
+</body><div class="delta-caa-wrapper"></div></html>
