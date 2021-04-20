@@ -12,3 +12,8 @@
   `python translation_unsup.py -Tts data/train_en_UNK.txt data/train_ko_UNK.txt data/test_en_UNK.txt data/test_ko_UNK.txt`
 
 * overleaf: https://www.overleaf.com/project/60590d6b3746621e927c5105
+
+-----
+This project is open-ended.
+
+Need to be fixed: The word2id should be saved together with the trained model.
